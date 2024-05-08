@@ -38,7 +38,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          sh "docker run -d -p 5000:5000 registry + ":$BUILD_NUMBER""
+          sh "docker run -d -p 5000:5000 registry + ":latest""
           sh "curl -v  http://18.208.214.55:5000"
         }
       }
