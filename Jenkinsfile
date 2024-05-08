@@ -38,6 +38,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
+          sh "docker stop $(docker ps -a -q)"
           sh "docker run -d -p 5000:5000 ankurjha21/python-flask-app:latest"
           sh "curl -v  http://18.208.214.55:5000"
         }
