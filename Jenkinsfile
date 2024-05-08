@@ -38,7 +38,7 @@ pipeline {
     stage('Deploy App') {
       steps {
         script {
-          docker run registry + ":$BUILD_NUMBER"
+          docker run -d  -p 5000:5000 ankurjha21/python-flask-app:latest
           "curl http://18.208.214.55:5000"
         }
       }
