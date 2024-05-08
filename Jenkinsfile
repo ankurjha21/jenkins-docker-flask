@@ -39,7 +39,7 @@ pipeline {
       steps {
         script {
           docker run registry + ":$BUILD_NUMBEr"
-          curl http://18.208.214.55:5000
+          "curl http://18.208.214.55:5000"
         }
       }
     }
