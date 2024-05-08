@@ -12,7 +12,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '697b1403-666a-4d37-99ca-c90b4150df32', url: 'https://github.com/ankurjha21/jenkins-java-cicd-tomcat.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '697b1403-666a-4d37-99ca-c90b4150df32', url: 'https://github.com/ankurjha21/jenkins-docker-flask.git']]])
       }
     }
 
